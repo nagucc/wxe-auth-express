@@ -22,7 +22,8 @@ export const signin = ({ wxapi, cookieNameForUserId = 'userId', callbackUrl }) =
 
             // 用户验证正确，设置用户状态为登录，返回原URL
             res.cookie(cookieNameForUserId, result.UserId, {maxAge: 24*3600*1000*365, signed: true});
-            res.redirect(req.signedCookies.redirect_uri);
+            // 当redirect_uri中包含中文时，可能会出错，应该进行encode操作。
+            res.redirect(encodeURI(req.signedCookies.redirect_uri));
           }
         });
       else {

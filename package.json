@@ -1,6 +1,6 @@
 {
   "name": "wxe-auth-express",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "express middleware, 用它可以实现微信企业号的登录",
   "main": "lib/index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "wxe-auth-express",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "用于微信企业号登录的express中间件",
   "repository": {
     "type": "git",
